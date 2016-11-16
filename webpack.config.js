@@ -9,5 +9,14 @@ module.exports = {
   output: {
     path: BUILD_DIR,
     filename: 'index.min.js'
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        include: APP_DIR,
+        loader: 'babel-loader'
+      }
+    ]
   }
 };
